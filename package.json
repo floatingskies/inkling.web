@@ -1,0 +1,33 @@
+{
+  "name": "Inkling.Web",
+  "version": "1.0.0",
+  "description": "Inkling Vector Editor",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --linux appimage",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.inkling.web",
+    "productName": "Inkling.Web",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!dist/**"
+    ],
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "category": "Graphics",
+      "icon": "assets/icon.png"
+    }
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  }
+}
